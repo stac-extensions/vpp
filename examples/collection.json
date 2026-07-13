@@ -1,7 +1,7 @@
 {
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://stac-extensions.github.io/template/v0.1.0/schema.json"
+    "https://stac-extensions.github.io/vpp/v0.1.0/schema.json"
   ],
   "type": "Collection",
   "id": "collection",
@@ -28,21 +28,11 @@
       ]
     }
   },
-  "template:new_field": "test",
-  "template:xyz": {
-    "x": 1,
-    "y": 2,
-    "z": 3
-  },
-  "template:another_one": [
-    1,
-    2,
-    3
-  ],
+  "vpp:season": "S1",
   "assets": {
     "example": {
       "href": "https://example.com/examples/file.xyz",
-      "template:new_field": "test"
+      "vpp:sub_parameter": "SOSD"
     }
   },
   "item_assets": {
@@ -50,14 +40,19 @@
       "roles": [
         "data"
       ],
-      "template:new_field": "test"
+      "vpp:sub_parameter": "SOSD"
     }
   },
   "summaries": {
     "datetime": {
       "minimum": "2015-06-23T00:00:00Z",
       "maximum": "2019-07-10T13:44:56Z"
-    }
+    },
+    "vpp:sub_parameter": [
+      "SOSD",
+      "EOSD",
+      "MAXV"
+    ]
   },
   "links": [
     {
